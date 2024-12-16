@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-5.12.1-web/css/all.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+      integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .navbar {
+        /* background: black; */
+        height: 4rem;
+        color: white;
+      }
+      .nav-center {
+        background: red;
+
+        /* height: 100%; */
+      }
+      .nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+      }
+      .nav-btn {
+        font-size: 1.5rem;
+        background: transparent;
+        border: transparent;
+        color: white;
+      }
+      .links {
+        height: 0px;
+        overflow: hidden;
+        transition: all 1s;
+      }
+      .links li {
+        list-style-type: none;
+      }
+      .links li a {
+        padding: 1rem;
+        font-size: 1.075rem;
+        display: block;
+        text-transform: capitalize;
+        color: white;
+        text-decoration: none;
+      }
+      .links li a:hover {
+        padding-left: 1.5rem;
+        background: silver;
+        transition: all 1s;
+      }
+      .show-nav {
+        height: 208px;
+        display: block;
+        /* transition: all 1s; */
+      }
+      @media screen and (min-width: 1170px) {
+        .navbar {
+          /* background: green; */
+        }
+        .nav-center {
+          width: 100%;
+          max-width: 1170px;
+          margin: 0 auto;
+          background: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <h2 class="nav-log">LOGO</h2>
+          <button class="btn nav-btn" onclick="show_navbar()">
+            <i class="fa fa-bars nav-btn-icon"></i>
+          </button>
+        </div>
+        <ul class="links">
+          <li><a href="index.html">home</a></li>
+          <li><a href="index.html">gallery</a></li>
+          <li><a href="index.html">about</a></li>
+          <li><a href="index.html">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>
+
+<script>
+  function show_navbar() {
+    $(".links").toggleClass("show-nav");
+  }
+</script>
